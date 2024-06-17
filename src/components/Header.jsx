@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Search from './Search';
 import Notification from './Notification';
+import Menu from './Menu';
 
 const Header = () => {
   const user = { name: 'ธรรมรัตน์', lastName: 'บุญญาพร' };
@@ -10,11 +11,11 @@ const Header = () => {
         <div>
           <Image src='/logo.png' alt='logo' width={60} height={60} />
         </div>
-        <div className='flex flex-col gap-1'>
-          <h1 className='text-lg font-bold'>
+        <div className='hidden lg:flex flex-col gap-1'>
+          <h1 className='text-[14px] xl:text-lg font-bold'>
             ระบบติดตามประเมินผลการดำเนินการงานตามแผนปฏิบัติราชการ
           </h1>
-          <p className='text-xs font-bold'>
+          <p className='text-[10px] xl:text-xs font-bold'>
             กรมพัฒนาสังคมและสวัสดิการ กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์
           </p>
         </div>
@@ -23,15 +24,17 @@ const Header = () => {
         <div className=''>
           <Search />
         </div>
-        <div className='flex items-center gap-5'>
-          <div className='flex items-center gap-2 tracking-wide'>
-            <p>สวัสดี</p>
+        <div className='flex items-center gap-3 xl:gap-5'>
+          <div className='hidden md:flex items-center gap-1 tracking-wide text-sm xl:text-base'>
+            <p className='hidden 2xl:block'>สวัสดี</p>
             <p>{`คุณ${user.name} ${user.lastName}`}</p>
           </div>
           <div>
             <Notification />
           </div>
-          <div>menu</div>
+          <div className='grid place-items-center'>
+            <Menu />
+          </div>
         </div>
       </div>
     </header>

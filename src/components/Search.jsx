@@ -2,7 +2,7 @@ import { FiSearch } from 'react-icons/fi';
 
 const Search = () => {
   return (
-    <div className='flex items-center  w-full lg:w-[350px] relative rounded-[5px] overflow-hidden'>
+    <div className='flex items-center  w-full 2xl:w-[350px] relative rounded-[5px] overflow-hidden'>
       <FiSearch className='absolute left-3 text-lg' />
       <input
         type='text'

@@ -18,6 +18,7 @@ const Notification = () => {
             alt='notification'
             width={35}
             height={35}
+            className='w-[30px] h-[30px] xl:w-[35px] xl:h-[35px]'
           />
         </button>
         {/* show if new notification */}
