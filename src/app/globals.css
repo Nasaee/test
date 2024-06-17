@@ -8,26 +8,58 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .background-gradient-horizontal {
+    background: hsla(134, 62%, 55%, 1);
+
+    background: linear-gradient(
+      45deg,
+      hsla(134, 62%, 55%, 1) 0%,
+      hsla(88, 67%, 66%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      45deg,
+      hsla(134, 62%, 55%, 1) 0%,
+      hsla(88, 67%, 66%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      45deg,
+      hsla(134, 62%, 55%, 1) 0%,
+      hsla(88, 67%, 66%, 1) 100%
+    );
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#43D365", endColorstr="#AEE370", GradientType=1 );
+  }
+
+  .shadow-1 {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .shadow-2 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .shadow-3 {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  .shadow-4 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .shadow-5 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  .shadow-6 {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 }
