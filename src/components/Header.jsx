@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Search from './Search';
 import Notification from './Notification';
-import Menu from './Menu';
+import MenuButton from './MenuButton';
 
 const Header = () => {
   const user = { name: 'ธรรมรัตน์', lastName: 'บุญญาพร' };
@@ -33,7 +33,7 @@ const Header = () => {
             <Notification />
           </div>
           <div className='grid place-items-center'>
-            <Menu />
+            <MenuButton />
           </div>
         </div>
       </div>
